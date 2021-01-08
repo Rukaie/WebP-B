@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<div class="slide">
+    <img src="blue.jpeg">
+    <img src="green.jpeg">
+    <img src="pink.jpeg">
+    <img src="purple.jpeg">
+    <img src="yellow.jpeg">
+</div>
+
+</html>
+<style>
+    .slide {
+        position: relative;
+        overflow: hidden;
+        width: 220px;
+        height: 220px;
+        margin: auto;
+        background: #fff;
+    }
+
+    .slide img {
+        display: block;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        left: 100%;
+        animation: slideAnime 40s ease infinite;
+    }
+
+    .slide img:nth-of-type(1) {
+        animation-delay: 0s
+    }
+
+    .slide img:nth-of-type(2) {
+        animation-delay: 8s
+    }
+
+    .slide img:nth-of-type(3) {
+        animation-delay: 16s
+    }
+
+    .slide img:nth-of-type(4) {
+        animation-delay: 24s
+    }
+
+    .slide img:nth-of-type(5) {
+        animation-delay: 32s
+    }
+
+    @keyframes slideAnime {
+        0% {
+            left: 100%
+        }
+
+        2% {
+            left: 0
+        }
+
+        18% {
+            left: 0
+        }
+
+        20% {
+            left: -100%
+        }
+
+        100% {
+            left: -100%
+        }
+    }
+</style>
