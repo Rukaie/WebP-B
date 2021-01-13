@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {
+    background-color:rgb(230,226,223);
+    color:rgb(112,62,30);
+}
+
+h1 {
+    text-align: center;
+    margin:10% 0% 5% 0%;
+}
+
+form {
+    margin: 0px 35%;
+}
+
+span {
+    color:red;
+}
+
+p{
+    font-size:20px;
+}
+
+input.question{
+    width:400px;
+    height:30px;
+}
+
+input.button{
+    margin-top:50px;
+    width:400px;
+    height:30px;
+    background-color:rgb(59,59,59);
+    border-radius: 5px;
+    color:rgb(255,255,255);
+}
