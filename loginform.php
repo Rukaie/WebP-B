@@ -6,7 +6,7 @@
   if(isset($_POST["login"])){
     if($_POST["userName"]=="web" && $_POST["password"]=="web"){
       $_SESSION["userName"]=$_POST["userName"];
-      $loginSuccessUrl="login_success.php";
+      $loginSuccessUrl="select_page.php";
       header("Location: {$loginSuccessUrl}");
       exit;
     }
