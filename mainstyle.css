@@ -1,0 +1,32 @@
+/* img{
+    width: 30%;
+    margin: 0 1.5%;
+    display: inline;
+} */
+
+img {
+    width: 30%;
+    margin: 0 1.5%;
+    display: inline;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+img:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.fadein {
+    opacity : 0;
+    transform: translateY(20px);
+    transition: all 1s;
+  }
+
+
+/* setTimeout(function(){
+    //1秒したら表示されるように
+    $(this).css('opacity', '1');
+    $(this).css('transform', 'translateY(0)');
+},1000); */
