@@ -6,30 +6,18 @@
     <link rel="stylesheet" href="select_page.css">
 </head>
 
-<?php
-function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
-
-$temp = $_GET["temp"];
-$weather = $_GET["weather"];
-
-$pdo = new PDO("sqlite:webp.sqlite");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-$st = $pdo->prepare("INSERT INTO situation(temp,weather) VALUES(?, ?)");
-$st->execute(array($temp, $weather));
-?>
-
 <body>
   <h1>Select Page</h1>
-    <form action="select_page.php" method="get">
+    <form action="test.php" method="get">
     Temparature<br>
     <select name="temp">
-    <option value="-5">BELOW 5℃</option>
-    <option value="5-10">5℃~10℃</option>
-    <option value="10-15">10℃~15℃</option>
-    <option value="15-20">15℃~20℃</option>
-    <option value="20-25">20℃~25℃</option>
-    <option value="25-30">25℃~30℃</option>
-    <option value="30-">OVER 30℃</option>
+    <option value="0">BELOW 5℃</option>
+    <option value="5">5℃~10℃</option>
+    <option value="10">10℃~15℃</option>
+    <option value="15">15℃~20℃</option>
+    <option value="20">20℃~25℃</option>
+    <option value="25">25℃~30℃</option>
+    <option value="30">OVER 30℃</option>
     </select> <br>
     Weather<br>
     <select name="weather">
