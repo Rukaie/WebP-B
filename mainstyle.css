@@ -5,7 +5,7 @@
 } */
 
 img {
-    width: 30%;
+    width: 28%;
     margin: 0 1.5%;
     display: inline;
     cursor: pointer;
@@ -22,11 +22,5 @@ img:hover {
     opacity : 0;
     transform: translateY(20px);
     transition: all 1s;
-  }
-
-
-/* setTimeout(function(){
-    //1秒したら表示されるように
-    $(this).css('opacity', '1');
-    $(this).css('transform', 'translateY(0)');
-},1000); */
+    margin: 0 15%;
+}

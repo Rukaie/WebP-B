@@ -1,6 +1,7 @@
-<?php 
-  $pdo = new PDO("sqlite:myblog.sqlite");
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+<?php
+  session_start();
+  function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
+  
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@
   <body>
   <div class="title"><h1>sign up</h1></div>
   <div class="signup">
-    <form action="signup.php" method="post">
+    <form action="signup_suc.php" method="get">
       <p>username<span>*</span><br>
       <input type="text" name="username" class="question" required></p>
 
@@ -33,17 +34,6 @@
       <input type="checkbox" name="agree"> I agree to the Privacy Policy
       <input type="submit" value="Send" class="button">
     </form>
-
-    <?php 
-       $name = ($_POST['username']);
-       $pw = ($_POST['password']);
-       $gender = ($_POST['gender']);
-
-       if($name != "" && $pw != "" && $gender != ""){
-         $sql = 'INSERT INTO user(username,password,gender)VALUES ("'.$name.'","'.$pw.'","'.$gender.'")';
-         $res = $pdo->exec($sql);
-       }
-
-    ?>
   </body>
+  
 </html>
