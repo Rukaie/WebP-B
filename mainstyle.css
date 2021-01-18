@@ -1,8 +1,19 @@
-/* img{
-    width: 30%;
-    margin: 0 1.5%;
-    display: inline;
-} */
+
+body {
+    font-family: 'Bodoni Moda', serif;
+    background-image: url("images/desktop-img-1.jpg");
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+    text-align: center;
+}
+
+.titleformain{
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    font-style: 'Bodoni Moda',italic;
+}
 
 img {
     width: 28%;
@@ -19,7 +30,7 @@ img:hover {
 }
 
 .fadein {
-    opacity : 0;
+    opacity: 1;
     transform: translateY(20px);
     transition: all 1s;
     margin: 0 15%;
