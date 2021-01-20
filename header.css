@@ -11,12 +11,7 @@ header {
   float: left;
    box-shadow: 1px 1px 0px 0 rgba(0, 0, 0, 0.1);
 }
-.cloud{
-  position: fixed;
-  left: 98px;
-  top: 3px;
-}
-a{
+.tabs a{
   float: right;
   font-size: 20px;
   padding-top: 30px;
@@ -24,7 +19,7 @@ a{
   text-decoration: none;
   color: black;
 }
-a :hover{
+.tabs a :hover{
   opacity: 0.7;
   transition: 0.2s;
 }

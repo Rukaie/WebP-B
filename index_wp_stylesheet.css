@@ -1,0 +1,115 @@
+*{
+margin: 0px;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body{
+  font-family: sofia-pro, sans-serif;
+  font-style: normal;
+}
+
+
+.top_body{
+  position: absolute;
+  text-align: left;
+  padding-left: 540px;
+  padding-top: 270px;
+  font-weight: 200;
+  color: #fff;
+}
+.top_body h2{
+  font-size: 30px;
+}
+.top_body p{
+  font-size: 20px;
+}
+
+.btn,
+a.btn,
+button.btn {
+  margin-top: 450px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2;
+  display: inline-block;
+  padding: 1rem 6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  margin-left: 50px;
+}
+
+.buttons{
+  position: absolute;
+  left: 500px;
+  top: 100px;
+  text-align: center;
+}
+.buttons a{
+  color: #fff;
+  background-color:   #3B3B3B;
+}
+.buttons a:hover{
+  background: #5E5E5E;
+}
+.signin_button{
+  padding-left: 30px;
+}
+
+                .slide {
+                    position: absolute;
+                    overflow: hidden;
+                    width: 100vw;
+                    height: 100vh;
+                    margin: auto;
+                    background: #fff;
+                }
+
+                .slide img {
+                    display: block;
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    left: 100%;
+                    filter: sepia(30%);
+                    animation: slideAnime 40s ease infinite;
+                }
+
+                .slide img:nth-of-type(1) {
+                    animation-delay: 0s
+                }
+
+                .slide img:nth-of-type(2) {
+                    animation-delay: 8s
+                }
+
+                .slide img:nth-of-type(3) {
+                    animation-delay: 16s
+                }
+
+                .slide img:nth-of-type(4) {
+                    animation-delay: 24s
+                }
+
+                .slide img:nth-of-type(5) {
+                    animation-delay: 32s
+                }
+
+                @keyframes slideAnime {
+                    0% { left: 100% }
+                    2% { left: 0 }
+                    18% { left: 0 }
+                    20% { left: -100% }
+                    100% { left: -100% }
+                }

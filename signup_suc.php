@@ -1,4 +1,4 @@
-<?php 
+<?php
   $pdo = new PDO("sqlite:webp.sqlite");
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
   $st = $pdo->prepare("INSERT INTO user(id, username, passward, gender) VALUES(?, ?, ?, ?)");
@@ -9,7 +9,6 @@ if(isset($_GET['username']) && isset($_GET['password']) && isset($_GET['gender']
    $name = ($_GET['username']);
    $pw = ($_GET['password']);
    $gender = ($_GET['gender']);
-   $id = 3;
    $st->execute(array($id,$name,$pw,$gender));
    $result="登録しました。";
   }
@@ -24,11 +23,10 @@ if(isset($_GET['username']) && isset($_GET['password']) && isset($_GET['gender']
   <head>
     <meta charset="utf-8">
     <title>アカウント登録</title>
-    <link rel="stylesheet" href="myblog_style.css">          
+    <link rel="stylesheet" href="myblog_style.css">
   </head>
   <body style="background-color:rgb(230,226,223);">
     <?php echo $result."画面が変わるまでお待ちください。"; ?><br>
-    <meta http-equiv="Refresh" content="3;URL=signup.php">
+    <meta http-equiv="Refresh" content="3;URL=index_wp.php">
   </body>
 </html>
-

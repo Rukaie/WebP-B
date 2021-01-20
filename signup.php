@@ -1,7 +1,8 @@
-<?php
-  session_start();
-  function h($str) { return htmlspecialchars($str, ENT_QUOTES, "UTF-8"); }
-  
+<?php session_start();
+if (isset($_SESSION["user"])) {
+  header("Location: select_page.php");
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="signup_style.css">
   </head>
   <body>
+
   <div class="title"><h1>sign up</h1></div>
   <div class="signup">
     <form action="signup_suc.php" method="get">
@@ -34,6 +36,7 @@
       <input type="checkbox" name="agree"> I agree to the Privacy Policy
       <input type="submit" value="Send" class="button">
     </form>
+    <a href="index_wp.php">トップページに戻る</a>
   </body>
-  
+
 </html>

@@ -1,19 +1,9 @@
-<?php
-  session_start();
-
-  $error_message="";
-
-  if(isset($_POST["login"])){
-    if($_POST["userName"]=="web" && $_POST["password"]=="web"){
-      $_SESSION["userName"]=$_POST["userName"];
-      $loginSuccessUrl="select_page.php";
-      header("Location: {$loginSuccessUrl}");
-      exit;
-    }
-    $error_message="ID,もしくはパスワードが間違っています。<br>もう一度入力してください。";
-
-  }?>
-
+<?php session_start();
+if (isset($_SESSION["user"])) {
+  header("Location: select_page.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -22,15 +12,13 @@
     <link rel="stylesheet" type="text/css" href="loginform_style.css">
   </head>
   <body>
-    <header>
-    </header>
     <?php if($error_message){
       echo $error_message;
     }?>
-    
+
     <content>
         <div class="title"><h1>login form</h1></div>
-        <form action="loginform.php" method="POST">
+        <form action="submit.php" method="GET">
 
         <p>username<span>*</span><br>
         <input type="text" name="userName" class="question" required></p>
@@ -40,12 +28,10 @@
 
         <input type="checkbox" name="agree" value="3" required>I agree to the Privacy Policy.<br>
         <input type="submit" value="Send" class="button" name="login">
-
+        </form>
+      <a href="index_wp.php">トップページに戻る</a>
     </content>
-    <footer>
-    </footer>
-    
+
   </body>
 
 </html>
-  

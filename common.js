@@ -1,7 +1,7 @@
 function header(rootDir){
     $.ajax({
         url: rootDir + "header.html",
-        cache: false, 
+        cache: false,
         async: false,
         success: function(html){
 
