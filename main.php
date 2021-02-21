@@ -104,8 +104,8 @@ if (isset($_SESSION["gender"])) {
         <img src="images/yukinoOver30.jpg"> <?php
   }?>
 <br>
-<a href="select_page.php">もう一度天気を選ぶ</a><br>
-<a href="index_wp.php">トップに戻る</a>
+<a href="select_page.php">～もう一度天気を選ぶ～</a><br>
+<a href="index_wp.php">～トップに戻る～</a>
 </body>
 <script>
     $(function(){

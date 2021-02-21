@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainstyle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <title>Dress Forcast</title>
 </head>
 
 <!-- ホバーしたら参照したサイトに飛ぶようにしたい -->
+
 <body>
     <p class="titleformain">Dress Forcast</p>
     <p>Today's selection for you!</p>
@@ -20,20 +23,24 @@
         <a href=""><img src="images/hama25-30.jpg"></a>
         <a href=""><img src="images/yukino25-30.jpg"></a>
     </div>
+    <br>
+    <a class="tag" href="select_page.php">～もう一度天気を選ぶ～</a><br>
+    <a class="tag" href="index_wp.php">～トップに戻る～</a>
 </body>
 <script>
-    $(function(){
-    $(window).scroll(function (){
-        $('.fadein').each(function(){
-            var targetElement = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 200){
-                $(this).css('opacity','1');
-                $(this).css('transform','translateY(0)');
-            }
+    $(function () {
+        $(window).scroll(function () {
+            $('.fadein').each(function () {
+                var targetElement = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > targetElement - windowHeight + 200) {
+                    $(this).css('opacity', '1');
+                    $(this).css('transform', 'translateY(0)');
+                }
+            });
         });
     });
-});
 </script>
+
 </html>
